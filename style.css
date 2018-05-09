@@ -1,0 +1,363 @@
+/*
+Theme Name: Dustii's First Theme
+Author: Dustii
+Author URI: http://dustiifinds.com/
+Description: My first attempt at a WordPress theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, white, gray, light, one-column, two-columns, flexible-width, fluid-layout, responsive-layout,
+
+*/
+
+/*@import url();*/
+
+html {
+  position: relative;
+  max-height: 100%;
+}
+
+body{
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0 0 64px 0;
+  margin: 0 !important;
+  background-color: #f4f4f4;
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#header-container{
+  overflow: visible;
+  margin-bottom: 15px;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header{
+  background: #000000;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #343ca5 3px solid;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+  font-family: 'Iceberg';
+}
+
+header #logo{
+  float: left;
+}
+
+header a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header #logo h1{
+  margin: 0 0 0 10px;
+  font-family: 'Iceberg';
+}
+
+header #logo h1 a:hover{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+header nav li a {
+  color: #343ca5;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+header .highlight, header .current a, .current-menu-item > a, .current-menu-ancestor > a, .current-post-ancestor > a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+header nav li a:hover, .drop-down-content a:hover {
+  color: #cccccc;
+  font-weight: bold;
+}
+
+#main-nav	{
+	height: 30px; /* set to the height you want your menu to be */
+	margin: 0 0 10px; /* just to give some spacing */
+}
+#main-nav ul	{
+	margin: 0; padding: 0; /* only needed if you have not done a CSS reset */
+}
+#main-nav li	{
+	display: block;
+	line-height: 30px; /* this should be the same as #main-nav height */
+	height: 30px; /* this should be the same as #main-nav height */
+	margin: 0; padding: 0; /* only needed if you don't have a reset */
+	position: relative; /* this is needed in order to position sub menus */
+}
+#main-nav li a	{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 15px;
+}
+
+#main-nav ul ul { /* this targets all sub menus */
+	display: none; /* hide all sub menus from view */
+	position: absolute;
+	top: 30px; /* this should be the same height as the top level menu -- height + padding + borders */
+  background-color: #000000;
+}
+#main-nav ul ul li { /* this targets all submenu items */
+	float: none; /* overwriting the float up above */
+	width: 150px; /* set to the width you want your sub menus to be. This needs to match the value set below */
+}
+#main-nav ul ul li a { /* target all sub menu item links */
+	padding: 0px 10px; /* give the sub menu links a nice button feel */
+}
+
+#main-nav ul li:hover > ul, #main-nav ul li:focus > ul {
+	display: block; /* show sub menus when hovering over a parent */
+}
+
+.neon, .current-menu-item > a, .current-menu-ancestor > a, .current-post-ancestor > a {
+  /* Darker: #2c3392 */
+  text-shadow:  0 0 2px #343ca5,
+          			0 0 4px #343ca5,
+                0 0 6px #343ca5,
+                0 0 8px #343ca5,
+                0 0 12px #343ca5,
+                0 0 16px #343ca5,
+                0 0 20px #343ca5,
+                0 0 24px #343ca5,
+                0 0 26px #343ca5;
+}
+
+/* Showcase */
+#showcase{
+  /* TODO Find good background image */
+  max-height: 400px;
+  /* background: url('/headerbg.jpg') no-repeat center rgba(0, 0, 0, 0.3); */
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+}
+
+#showcase .layer{
+  max-height: 400px;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#showcase h1{
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#showcase p {
+  font-size: 20px;
+}
+
+.content {
+  min-height: calc(100vh - 140px);
+}
+
+.content .container {
+  margin: auto;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 70px; /* Set the fixed height of the footer here */
+  line-height: 70px; /* Vertically center the text there */
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  background-color: #343ca5;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* About Page */
+aside#sidebar{
+  float: right;
+  width: 30%;
+  padding: 25px;
+}
+
+aside#sidebar .contact input, aside#sidebar .contact textarea{
+  width: 90%;
+  padding: 5px;
+}
+
+article#main-col{
+  float: left;
+  padding: 20px;
+  width: 65%;
+}
+
+/* Contact Page */
+ul#contact {
+  color: #ffffff;
+}
+
+ul#contact li{
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #343ca5;
+}
+
+ul#contact h3{
+  border-bottom: #ffffff solid 1px;
+}
+
+/* Thumbnail */
+.thumbnail-wrapper{
+  padding-bottom: 10px;
+}
+
+.thumbnail-wrapper img{
+  max-width: 75%;
+  height: auto;
+}
+
+/* Content Page */
+article.content-page h1{
+    margin-bottom: 0;
+}
+
+article.content-page .image-wrapper{
+  text-align: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+article.content-page .image-wrapper img{
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+article.content-page .image-wrapper span{
+  font-size: 10px;
+  color: #ccc;
+}
+
+.content-meta {
+  color: #aaa;
+  font-size: 12px !important;
+}
+
+article.content-page p{
+  font-size: 14px;
+}
+
+/* Wordpress */
+.page {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+@media(max-width: 768px){
+  .container{
+    width: 100%;
+  }
+
+  /* insert CSS code for small screen sizes here */
+  header #logo, header nav, header nav li, .content .box{
+    float:none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 20px 20px;
+    font-family: 'Iceberg';
+  }
+
+  header li a {
+    margin-bottom: 20px;
+  }
+
+  #header-container{
+    height: 30%;
+  }
+
+  #main-nav ul ul { /* this targets all sub menus */
+    width: 100%;
+  }
+
+  #main-nav ul ul li { /* this targets all sub menus */
+    margin: auto;
+  }
+
+  #showcase, #showcase .layer {
+    max-height: none;
+    height: auto;
+  }
+
+  #showcase p, #showcase h1{
+    margin: 0;
+    padding: 10px;
+  }
+
+  .content .container {
+    padding: 10px;
+  }
+
+  /* About Page */
+  article#main-col, aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Thumbnail */
+  .thumbnail-wrapper {
+    float: none;
+    margin: auto;
+  }
+
+  /* Content Page */
+  article.content-page .image-wrapper{
+    float: none;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  article.content-page .image-wrapper img{
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+}
